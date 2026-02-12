@@ -93,9 +93,9 @@ function Manufacturing() {
                     transition={{ duration: 0.7 }}
                 >
                     <img
-                        src="/manufacturing.jpg"
+                        src="/manufacturing.png"
                         alt="Industrial manufacturing facility"
-                        className="rounded-3xl shadow-2xl"
+                        className="rounded-3xl"
                     />
                 </motion.div>
 
