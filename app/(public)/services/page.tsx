@@ -1,9 +1,28 @@
+import { Metadata } from "next"
 import ConsultancyServices from "./ConsultancyServices"
 import DesignAndFabrication from "./DesignAndFabrication"
 import Hero from "./Hero"
 import Manufacturing from "./Manufacturing"
 import VegetableOilProcessing from "./VegetableOilProcessing"
 import WhyChooseUs from "./WhyChooseUs"
+
+export const metadata: Metadata = {
+    title: "Our Services",
+    description:
+        "Explore Taminje International Limited's services including Design & Fabrication, Manufacturing, Vegetable Oil Processing, Consultancy Services, and General Contracting across Nigeria.",
+
+    keywords: [
+        "Engineering services Nigeria",
+        "Design and Fabrication",
+        "Manufacturing company Nigeria",
+        "Vegetable oil processing",
+        "Engineering consultancy",
+        "General contracting Nigeria",
+        "Taminje International Limited",
+    ],
+
+
+};
 
 function page() {
     return (
