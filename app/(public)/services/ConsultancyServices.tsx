@@ -69,7 +69,7 @@ function ConsultancyServices() {
             </section>
 
             {/* SERVICES GRID */}
-            <div className="max-w-[90%] mx-auto grid md:grid-cols-2 lg:grid-cols-5 gap-10">
+            <div className="max-w-[90%] mx-auto grid md:grid-cols-2 lg:grid-cols-5 gap-10 pb-24">
                 {services.map((service, i) => (
                     <Link
                         key={i}
@@ -108,7 +108,7 @@ function ConsultancyServices() {
 
 
             {/* LEADERSHIP */}
-            <section className="max-w-6xl mx-auto px-6 py-16">
+            {/* <section className="max-w-6xl mx-auto px-6 py-16">
                 <h2 className="text-3xl font-bold text-center mb-12">Leadership Team</h2>
                 <div className="grid md:grid-cols-2 gap-12">
                     <div className="bg-white rounded-2xl p-8 shadow text-center">
@@ -137,7 +137,7 @@ function ConsultancyServices() {
                         </p>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
         </div>
     );

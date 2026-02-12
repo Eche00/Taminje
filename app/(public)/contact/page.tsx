@@ -1,8 +1,15 @@
-import React from 'react'
+import ContactUs from "./ContactUs"
 
 function page() {
     return (
-        <div>page</div>
+        <div>
+            {/* Homepage container */}
+            <main>
+
+                <ContactUs />
+
+            </main>
+        </div>
     )
 }
 

@@ -1,14 +1,13 @@
 'use client'
 
-import {
-    ArrowForward,
-    Description,
-    Hub,
-    ShowChart,
-} from '@mui/icons-material'
+
 import { motion } from 'framer-motion'
-import Link from 'next/link'
-import React from 'react'
+import {
+    Engineering,
+    Verified,
+    Groups,
+} from "@mui/icons-material";
+
 
 const container = {
     hidden: { opacity: 0 },
@@ -28,24 +27,24 @@ const item = {
 function WhyChooseUs() {
     const reasons = [
         {
-            number: '01',
-            title: 'Reason One',
-            icon: Description,
-            text: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati.',
+            number: "01",
+            title: "Experienced Leadership",
+            icon: Engineering,
+            text: "Led by professionals with over 33 years and 12+ years of experience across public and private sectors, Taminje International Limited combines strategic vision, operational discipline, and hands-on expertise to deliver dependable results.",
         },
         {
-            number: '02',
-            title: 'Reason Two',
-            icon: Hub,
-            text: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi occaecati blanditiis.',
+            number: "02",
+            title: "Multiservice Capability",
+            icon: Groups,
+            text: "We provide integrated solutions in design and fabrication, manufacturing, vegetable oil processing, consultancy services, and general contracting—allowing clients to access diverse technical and operational expertise under one company.",
         },
         {
-            number: '03',
-            title: 'Reason Three',
-            icon: ShowChart,
-            text: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi.',
+            number: "03",
+            title: "Quality & Accountable Delivery",
+            icon: Verified,
+            text: "Our approach emphasizes clear scope definition, disciplined execution, safety, and accountability. We focus on structured processes and measurable outcomes to ensure projects are delivered professionally and on time.",
         },
-    ]
+    ];
 
     return (
         <div>
@@ -101,10 +100,7 @@ function WhyChooseUs() {
                                     <IconComponent />
                                 </div>
 
-                                {/* Number */}
-                                <p className="text-sm text-gray-400 mb-2">
-                                    {reason.number}
-                                </p>
+
 
                                 {/* Title */}
                                 <h3 className="text-lg font-semibold mb-4">
@@ -116,10 +112,7 @@ function WhyChooseUs() {
                                     {reason.text}
                                 </p>
 
-                                {/* Arrow Button */}
-                                <button className="mt-6 h-10 w-10 rounded-full border border-[#33A259]/90 text-[#33A259] flex items-center justify-center hover:bg-teal-500 hover:text-white transition">
-                                    <ArrowForward fontSize="small" />
-                                </button>
+
                             </motion.div>
                         )
                     })}
