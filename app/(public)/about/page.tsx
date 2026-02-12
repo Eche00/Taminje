@@ -3,6 +3,13 @@ import MissionAndVission from './MissionAndVission'
 import Hero from './Hero'
 import Leaders from './Leaders'
 import Location from './Location'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+    title: "About Us | Taminje International Limited",
+    description: "Learn about our leadership, experience, and multisector expertise.",
+};
+
 
 function page() {
     return (

@@ -66,9 +66,9 @@ function Manufacturing() {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.7 }}
                 >
-                    <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+                    <h2 className="text-4xl md:text-5xl font-bold leading-tight">
                         Manufacturing <span className="text-[#33A259]">Solutions</span>
-                    </h1>
+                    </h2>
 
                     <div className="w-20 h-1.5 bg-[#33A259] my-6 rounded-full" />
 
