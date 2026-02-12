@@ -83,7 +83,7 @@ function VegetableOilProcessing() {
                         href="/contact"
                         className="inline-flex items-center gap-2 mt-10 bg-[#33A259] text-white px-8 py-4 rounded-xl font-medium hover:scale-105 transition-all duration-300"
                     >
-                        Request Processing Support
+                        Request Processing
                         <ArrowForward fontSize="small" />
                     </Link>
                 </motion.div>
