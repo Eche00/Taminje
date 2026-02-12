@@ -55,9 +55,9 @@ function ServicesOverview() {
                     transition={{ duration: 0.6 }}
                 >
                     <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
-                        Our Services
+                        Our <span className="text-[#33A259]">Services</span>
                     </h2>
-                    <div className="w-16 h-1 bg-[#33A259] mx-auto my-4 rounded-full" />
+                    <div className="w-16 h-2 bg-[#33A259] mx-auto my-4 rounded-full" />
                     <p className="text-gray-500 sm:text-lg text-sm">
                         We deliver practical, reliable, and professionally
                         executed solutions across engineering, manufacturing,
@@ -67,7 +67,7 @@ function ServicesOverview() {
 
                 {/* SERVICES GRID */}
                 <motion.div
-                    className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 max-w-5xl mx-auto"
+                    className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 max-w-7xl mx-auto"
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}

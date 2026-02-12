@@ -39,7 +39,7 @@ const values = [
 function CoreValues() {
     return (
         <section className="w-full py-20">
-            <div className="max-w-6xl mx-auto px-4 grid lg:grid-cols-[220px_1fr] gap-10 items-start">
+            <div className="max-w-7xl mx-auto px-4 grid lg:grid-cols-[220px_1fr] gap-10 items-start">
 
                 {/* LEFT CONTENT */}
                 <motion.div

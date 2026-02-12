@@ -48,7 +48,7 @@ const icons = [
 function FAQSection() {
     return (
         <section className="w-full bg-gray-100 py-20">
-            <div className="max-w-6xl mx-auto px-4">
+            <div className="max-w-7xl mx-auto px-4">
 
                 {/* HEADER */}
                 <div className="mb-14">

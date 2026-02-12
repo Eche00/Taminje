@@ -36,7 +36,7 @@ function Header() {
                 {/* Navigation */}
                 <div className="md:flex hidden flex-1 items-center justify-center">
                     <nav className="w-fit  flex items-center gap-4 py-3 px-6 rounded-lg">
-                        {publicItems.map((item) => (
+                        {publicItems.slice(0, 3).map((item) => (
                             <Link
                                 href={item.link}
                                 key={item.name}
@@ -55,10 +55,10 @@ function Header() {
                 {/* Auth Button  */}
                 <div className="md:flex hidden flex-1 items-center justify-end gap-5  ">
                     <Link
-                        href="/auth/sign-in"
+                        href="/contact"
                         className=" text-white bg-[#33A259] hover:bg-[#33A259]/90 font-bold  md:py-2 py-1.5 md:px-7 px-3 rounded-lg cursor-pointer w-fit"
                     >
-                        Consult
+                        Contact
                     </Link>
                 </div>
                 {/* mobile menu button  */}
@@ -86,7 +86,7 @@ function Header() {
                             className="bg-white flex flex-col gap-2 text-[10px] w-[70%] p-5"
                             onClick={(e) => e.stopPropagation()}
                         >
-                            {publicItems.map((item) => (
+                            {publicItems.slice(0, 3).map((item) => (
                                 <Link
                                     href={item.link}
                                     key={item.name}
@@ -103,10 +103,10 @@ function Header() {
                             <hr className=" w-full h-[0.1px] bg-gray-600 border-none" />
                             <div className="flex items-center justify-end gap-5  ">
                                 <Link
-                                    href="/auth/sign-in"
+                                    href="/contact"
                                     className=" text-white bg-[#33A259] hover:bg-[#33A259]/90 font-bold  md:py-2 py-1.5 md:px-7 px-3 rounded-lg cursor-pointer w-fit"
                                 >
-                                    Consult
+                                    Contact
                                 </Link>
                             </div>
                         </motion.aside>
