@@ -2,7 +2,7 @@
 
 import React from "react"
 import Link from "next/link"
-import { Facebook, LinkedIn, Instagram } from "@mui/icons-material"
+import { Facebook, LinkedIn, Instagram, LocationOn } from "@mui/icons-material"
 
 function Footer() {
     return (
@@ -10,7 +10,7 @@ function Footer() {
             <div className="max-w-7xl mx-auto px-6 py-16">
 
                 {/* TOP */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
 
                     {/* BRAND / ABOUT */}
                     <div className="lg:col-span-2 space-y-4">
@@ -24,9 +24,11 @@ function Footer() {
                         </p>
 
                         {/* LOCATION */}
-                        <div className="text-sm text-gray-400">
-                            <p className="font-medium text-gray-300">Location</p>
-                            <p>Nigeria</p>
+                        <div className="text-sm text-gray-400 flex items-start gap-2">
+                            <div className=" text-[#33A259]  flex items-center justify-center rounded-lg"><LocationOn /></div>
+                            <p className="font-medium text-gray-300">No 8 Yahwehab Estate Phase, Plot 334
+                                Dahiru Musdapha Doulevard Wuye District,
+                                900108 Abuja Nigeria</p>
                         </div>
                     </div>
 
@@ -36,9 +38,9 @@ function Footer() {
                             Company
                         </h4>
                         <ul className="space-y-3 text-sm">
+                            <li><Link href="/" className="hover:text-white">Home</Link></li>
                             <li><Link href="/about" className="hover:text-white">About Us</Link></li>
-                            <li><Link href="/leadership" className="hover:text-white">Leadership</Link></li>
-                            <li><Link href="/careers" className="hover:text-white">Careers</Link></li>
+                            <li><Link href="/services" className="hover:text-white">Our Services</Link></li>
                             <li><Link href="/contact" className="hover:text-white">Contact</Link></li>
                         </ul>
                     </div>
@@ -50,35 +52,25 @@ function Footer() {
                         </h4>
                         <ul className="space-y-3 text-sm">
                             <li>
-                                <Link href="/services/design-and-fabrication" className="hover:text-white">
-                                    Design & Fabrication
-                                </Link>
+                                Design & Fabrication
                             </li>
                             <li>
-                                <Link href="/services/manufacturing" className="hover:text-white">
-                                    Manufacturing
-                                </Link>
+                                Manufacturing
                             </li>
                             <li>
-                                <Link href="/services/vegetable-oil-processing" className="hover:text-white">
-                                    Vegetable Oil Processing
-                                </Link>
+                                Vegetable Oil Processing
                             </li>
                             <li>
-                                <Link href="/services/consultancy" className="hover:text-white">
-                                    Consultancy Services
-                                </Link>
+                                Consultancy Services
                             </li>
                             <li>
-                                <Link href="/services/general-contracting" className="hover:text-white">
-                                    General Contracting
-                                </Link>
+                                General Contracting
                             </li>
                         </ul>
                     </div>
 
                     {/* LEGAL */}
-                    <div>
+                    {/* <div>
                         <h4 className="text-white text-sm font-semibold mb-4">
                             Legal
                         </h4>
@@ -88,7 +80,7 @@ function Footer() {
                             <li><Link href="/cookies" className="hover:text-white">Cookies Policy</Link></li>
                             <li><Link href="/data-processing" className="hover:text-white">Data Processing</Link></li>
                         </ul>
-                    </div>
+                    </div> */}
                 </div>
 
                 {/* DIVIDER */}

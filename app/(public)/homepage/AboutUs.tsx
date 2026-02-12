@@ -1,9 +1,9 @@
 'use client'
-import React from "react";
+
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 import GroupsIcon from "@mui/icons-material/Groups";
-import { ArrowForward, PlayCircle } from "@mui/icons-material";
+import { ArrowForward } from "@mui/icons-material";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -53,8 +53,10 @@ function AboutUs() {
                                 visible: { opacity: 1, y: 0 },
                             }}
                             transition={{ duration: 0.5 }}
-                            className="bg-white rounded-xl shadow-lg p-5 flex flex-col gap-3"
+                            className="bg-white rounded-xl shadow-lg p-5 flex flex-col gap-3 relative"
                         >
+                            {/* Decorative top accent */}
+                            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-[#33A259] rounded-full"></div>
                             <div className="w-12 h-12 rounded-full bg-[#33A259]/15 flex items-center justify-center text-[#33A259]">
                                 <EmojiEventsIcon />
                             </div>
@@ -74,8 +76,10 @@ function AboutUs() {
                                 visible: { opacity: 1, y: 0 },
                             }}
                             transition={{ duration: 0.5 }}
-                            className="bg-white rounded-xl shadow-lg p-5 flex flex-col gap-3"
+                            className="bg-white rounded-xl shadow-lg p-5 flex flex-col gap-3 relative"
                         >
+                            {/* Decorative top accent */}
+                            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-[#33A259] rounded-full"></div>
                             <div className="w-12 h-12 rounded-full bg-black/10 flex items-center justify-center text-black">
                                 <AccountBalanceIcon />
                             </div>
@@ -95,8 +99,10 @@ function AboutUs() {
                                 visible: { opacity: 1, y: 0 },
                             }}
                             transition={{ duration: 0.5 }}
-                            className="bg-white rounded-xl shadow-lg p-5 flex flex-col gap-3"
+                            className="bg-white rounded-xl shadow-lg p-5 flex flex-col gap-3 relative"
                         >
+                            {/* Decorative top accent */}
+                            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-[#33A259] rounded-full"></div>
                             <div className="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center text-gray-700">
                                 <GroupsIcon />
                             </div>
@@ -135,7 +141,7 @@ function AboutUs() {
                     transition={{ duration: 0.7 }}
                 >
                     <img
-                        src="https://images.unsplash.com/photo-1522071820081-009f0129c71c"
+                        src="/aboutusimg.avif"
                         alt="Taminje International Limited team at work"
                         className="rounded-2xl w-full max-w-130 shadow-xl"
                     />
@@ -150,16 +156,11 @@ function AboutUs() {
                     >
                         <div className="relative rounded-xl overflow-hidden">
                             <img
-                                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c"
+                                src="/aboutusimg2.avif"
                                 alt="Project execution preview"
                                 className="rounded-xl"
                             />
-                            <div className="absolute inset-0 flex items-center justify-center">
-                                <PlayCircle
-                                    className="text-white"
-                                    sx={{ fontSize: 60 }}
-                                />
-                            </div>
+
                         </div>
                     </motion.div>
                 </motion.div>
