@@ -7,6 +7,7 @@ import FactoryIcon from "@mui/icons-material/Factory";
 import OpacityIcon from "@mui/icons-material/Opacity";
 import SupportAgentIcon from "@mui/icons-material/SupportAgent";
 import EngineeringIcon from "@mui/icons-material/Engineering";
+import { Build, SolarPower } from "@mui/icons-material";
 
 const services = [
     {
@@ -39,6 +40,18 @@ const services = [
             "End-to-end project coordination and execution for construction and infrastructure projects, covering planning, resource management, supervision, and quality control to ensure safe, timely, and accountable delivery.",
         icon: <PrecisionManufacturingIcon />,
     },
+    {
+        title: "Solar Power Systems",
+        description:
+            "Comprehensive solar energy solutions including system design, equipment supply, professional installation, and maintenance for residential, commercial, and industrial applications.",
+        icon: <SolarPower />,
+    },
+    {
+        title: "Project Start-up & Troubleshooting",
+        description:
+            "Technical support for commissioning, system optimization, diagnostics, and rapid troubleshooting to ensure smooth project start-up and operational efficiency.",
+        icon: <Build />,
+    },
 ];
 
 function ServicesOverview() {
@@ -67,7 +80,7 @@ function ServicesOverview() {
 
                 {/* SERVICES GRID */}
                 <motion.div
-                    className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 max-w-7xl mx-auto"
+                    className="flex flex-wrap items-stretch  justify-center gap-8 max-w-7xl mx-auto"
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}
@@ -80,36 +93,43 @@ function ServicesOverview() {
                         },
                     }}
                 >
-                    {services.map((service, index) => {
-                        const isLast = index === services.length - 1;
-                        const isOdd = services.length % 3 === 2;
+                    {services.map((service, index) => (
+                        <motion.div
+                            key={index}
+                            variants={{
+                                hidden: { opacity: 0, y: 40 },
+                                visible: { opacity: 1, y: 0 },
+                            }}
+                            transition={{ duration: 0.5, ease: "easeOut" }}
+                            whileHover={{ y: -8 }}
+                            className="group bg-white rounded-2xl p-8 
+                   shadow-sm border border-gray-100
+                   hover:shadow-xl hover:border-[#33A259]
+                   transition-all duration-300 cursor-pointer
+                   flex flex-col w-full max-w-100"
+                        >
+                            {/* Icon */}
+                            <div className="w-14 h-14 mb-6 rounded-xl 
+                        bg-[#33A259]/10 
+                        flex items-center justify-center 
+                        text-[#33A259] 
+                        group-hover:bg-[#33A259] 
+                        group-hover:text-white 
+                        transition-all duration-300">
+                                {service.icon}
+                            </div>
 
-                        return (
-                            <motion.div
-                                key={index}
-                                variants={{
-                                    hidden: { opacity: 0, y: 40 },
-                                    visible: { opacity: 1, y: 0 },
-                                }}
-                                transition={{ duration: 0.5, ease: "easeOut" }}
-                                whileHover={{ y: -10 }}
-                                className={`group bg-white rounded-2xl p-8 shadow-md transition-all duration-300 cursor-pointer hover:border-2 hover:border-[#33A259]
-                ${isLast && isOdd ? "lg:col-span-2 lg:mx-auto" : ""}
-            `}
-                            >
-                                <div className="w-14 h-14 mb-6 rounded-xl bg-[#33A259]/10 flex items-center justify-center text-[#33A259] group-hover:bg-[#33A259] group-hover:text-white transition-colors duration-300">
-                                    {service.icon}
-                                </div>
+                            {/* Title */}
+                            <h3 className="text-xl font-semibold text-gray-900 mb-3 leading-snug">
+                                {service.title}
+                            </h3>
 
-                                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                                    {service.title}
-                                </h3>
-                                <p className="text-gray-500 leading-relaxed">
-                                    {service.description}
-                                </p>
-                            </motion.div>
-                        );
-                    })}
+                            {/* Description */}
+                            <p className="text-gray-500 leading-relaxed text-sm flex grow">
+                                {service.description}
+                            </p>
+                        </motion.div>
+                    ))}
 
                 </motion.div>
             </div>

@@ -102,7 +102,7 @@ function VegetableOilProcessing() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
                     >
-                        <h2 className="text-3xl font-semibold">Core Features</h2>
+                        <h3 className="text-3xl font-semibold">Core Features</h3>
                         <p className="text-gray-500 mt-3 max-w-2xl mx-auto">
                             Comprehensive vegetable oil processing expertise with
                             focus on quality, efficiency, and structured operations.
@@ -120,8 +120,9 @@ function VegetableOilProcessing() {
                             <motion.div
                                 key={index}
                                 variants={item}
-                                className="group p-8 rounded-2xl bg-white border border-gray-200 hover:border-[#33A259] hover:shadow-xl transition-all duration-300"
+                                className="group relative p-8 bg-white rounded-3xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2"
                             >
+                                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-[#33A259] rounded-full"></div>
                                 <div className="h-14 w-14 flex items-center justify-center rounded-xl bg-[#33A259]/10 text-[#33A259] group-hover:bg-[#33A259] group-hover:text-white transition-all duration-300">
                                     {feature.icon}
                                 </div>

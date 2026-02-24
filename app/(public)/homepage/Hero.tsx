@@ -47,11 +47,12 @@ function Hero() {
                     <div className=" flex flex-col md:text-start text-center md:items-start items-center gap-4">
 
                         <h1 className=" text-white font-bold  md:text-[40px] sm:text-[36px] text-[30px] md:leading-[100%] md:tracker-[1.28px] leading-[120%] tracker-[0.8px]">
-                            Solutions in Design, Manufacturing &
+                            Design, Manufacturing, Solar Power &
                             <span className=" text-[#33A259]"> Contracting</span>
+
                         </h1>
                         <p className=" text-white font-light md:text-6 sm:text-[18px] text-[14px] ">
-                            Delivering Practical, Quality-Driven Solutions Across Design, Manufacturing, Processing, and Contracting, Backed by Decades of Leadership Experience and Industry Expertise.
+                            Delivering Practical, Quality-Driven Solutions Across Design, Manufacturing, Processing, Contracting, Solar Power Systems, and Project Start-up & Troubleshooting, Backed by Decades of Leadership Experience and Industry Expertise.
                         </p>
                     </div>
                     {/* Provision list with MUI icons */}

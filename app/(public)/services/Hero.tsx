@@ -11,6 +11,8 @@ function Hero() {
         "Vegetable Oil Processing",
         "Consultancy Services",
         "General Contracting",
+        "Solar Power Systems",
+        "Project Start-up & Troubleshooting",
     ];
 
     return (

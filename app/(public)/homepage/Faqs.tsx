@@ -10,32 +10,47 @@ const faqs = [
     {
         title: "What services does Taminje International Limited provide?",
         description:
-            "We provide design and fabrication, manufacturing support, vegetable oil processing, consultancy services, and general contracting for industrial and commercial projects.",
+            "We provide design & fabrication, manufacturing solutions, solar power systems (design, supply & installation), project start-up & troubleshooting, vegetable oil processing, consultancy services, and general contracting for industrial and commercial projects.",
+    },
+    {
+        title: "Do you design and install solar power systems?",
+        description:
+            "Yes. We deliver end-to-end solar PV solutions including load assessment, system sizing, component supply, professional installation, testing, commissioning, and maintenance support for residential, commercial, and industrial applications.",
+    },
+    {
+        title: "What is included in Project Start-up & Troubleshooting services?",
+        description:
+            "We provide commissioning support, structured diagnostics, fault finding, root cause analysis, corrective actions, and performance optimization to stabilize operations and reduce downtime during project start-up or ongoing operations.",
     },
     {
         title: "When was Taminje International Limited established?",
         description:
-            "The company was registered in February 2026 and is led by professionals with extensive experience across public and private sectors.",
+            "The company was registered in February 2026 and is led by experienced professionals with strong backgrounds in engineering, operations, manufacturing, and corporate governance.",
     },
     {
         title: "Do you handle projects from start to finish?",
         description:
-            "Yes. Depending on scope, we support planning, coordination, execution, monitoring, and final delivery with clear accountability.",
+            "Yes. Depending on scope, we manage planning, coordination, procurement, execution, supervision, monitoring, and final delivery with clear accountability and structured reporting.",
     },
     {
-        title: "What industries do you work with?",
+        title: "What industries do you serve?",
         description:
-            "We work with industrial, manufacturing, processing, and commercial sectors, adapting our services to project-specific requirements.",
+            "We serve industrial, manufacturing, renewable energy, agro-processing, construction, and commercial sectors, tailoring solutions to project-specific technical and operational requirements.",
+    },
+    {
+        title: "Can you support existing facilities experiencing operational issues?",
+        description:
+            "Yes. Through our troubleshooting and optimization services, we assess underperforming systems, identify technical gaps, and implement structured corrective solutions to restore efficiency and reliability.",
     },
     {
         title: "Is your leadership team experienced?",
         description:
-            "Yes. Our leadership brings over 33 years and 12+ years of experience respectively in engineering, operations, and corporate governance.",
+            "Yes. Our leadership team brings decades of combined experience in engineering, operations management, and strategic oversight across both public and private sector projects.",
     },
     {
-        title: "How can I contact your team?",
+        title: "How can I contact Taminje International Limited?",
         description:
-            "You can reach us via the Contact page on our website to request consultations, quotations, or discuss partnerships.",
+            "You can reach us via emma.kwaya@taminje.com or esther.kwaya@taminje.com, or call +234 806 687 8945 or +234 816 656 2016. Our office is located at No 8 Yah-Wahab Estate Phase 3, Plot 334 Dahiru Musdapha Boulevard, Wuye District 900108, Abuja, Nigeria.",
     },
 ]
 

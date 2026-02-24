@@ -100,7 +100,7 @@ function ContactUs() {
                                 animate={{ y: 0, opacity: 1 }}
                                 transition={{ delay: i * 0.15 }}
                                 whileHover={{ y: -4 }}
-                                className="group flex items-start gap-4 bg-white sm:p-6 p-3 rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300"
+                                className="group flex items-center gap-4 bg-white sm:p-6 p-3 rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300"
                             >
                                 <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-[#33A259]/10 text-[#33A259] group-hover:bg-[#33A259] group-hover:text-white transition-all duration-300">
                                     <Icon />
@@ -109,20 +109,26 @@ function ContactUs() {
                                     {i === 0 && (
                                         <>
                                             <p className="text-xs uppercase tracking-wide text-gray-400 mb-1">Email</p>
-                                            <p className="font-semibold text-gray-800">info@taminje.com</p>
+                                            <a href="mailto:info@taminje.com" className="font-semibold text-gray-800">info@taminje.com</a>
                                         </>
                                     )}
                                     {i === 1 && (
                                         <>
                                             <p className="text-xs uppercase tracking-wide text-gray-400 mb-1">Phone</p>
-                                            <p className="font-semibold text-gray-800">+234 xxx xxx xxxx</p>
+                                            <div className="flex flex-col gap-2 font-semibold text-gray-800">
+                                                <a href="tel:+2348066878945" >
+                                                    +234 806 687 8945
+                                                </a>
+                                                <a href="tel:+2348166562016" >+234 816 656 2016</a>
+
+                                            </div>
                                         </>
                                     )}
                                     {i === 2 && (
                                         <>
                                             <p className="text-xs uppercase tracking-wide text-gray-400 mb-1">Location</p>
                                             <p className="font-semibold text-gray-800 text-sm leading-relaxed">
-                                                Abuja, Nigeria
+                                                No 8 Yah-Wahab Estate Phase 3, Plot 334 Dahiru Musdapha <br /> Boulevard, Wuye District 900108, Abuja, Nigeria
                                             </p>
                                         </>
                                     )}

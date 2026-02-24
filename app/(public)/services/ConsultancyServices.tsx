@@ -53,9 +53,9 @@ function ConsultancyServices() {
 
             {/* HERO SECTION */}
             <section className="max-w-6xl mx-auto px-6 py-20 text-center">
-                <h2 className="text-2xl md:text-4xl font-bold">
+                <h3 className="text-2xl md:text-4xl font-bold">
                     Consultancy & General  <span className="text-[#33A259]">Contracting</span>
-                </h2>
+                </h3>
                 <p className="mt-6 text-lg text-gray-600 max-w-3xl mx-auto">
                     Taminje International Limited provides practical, results-driven services across design, fabrication, manufacturing, vegetable oil processing, consultancy, and general contracting—guided by experienced leadership and a commitment to operational excellence.
                 </p>
@@ -109,7 +109,7 @@ function ConsultancyServices() {
 
             {/* LEADERSHIP */}
             {/* <section className="max-w-6xl mx-auto px-6 py-16">
-                <h2 className="text-3xl font-bold text-center mb-12">Leadership Team</h2>
+                <h3 className="text-3xl font-bold text-center mb-12">Leadership Team</h3>
                 <div className="grid md:grid-cols-2 gap-12">
                     <div className="bg-white rounded-2xl p-8 shadow text-center">
                         <img

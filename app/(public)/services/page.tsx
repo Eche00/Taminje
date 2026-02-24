@@ -5,6 +5,8 @@ import Hero from "./Hero"
 import Manufacturing from "./Manufacturing"
 import VegetableOilProcessing from "./VegetableOilProcessing"
 import WhyChooseUs from "./WhyChooseUs"
+import ProjectStartup from "./ProjectStartup"
+import SolarPower from "./SolarPower"
 
 export const metadata: Metadata = {
     title: "Our Services",
@@ -36,6 +38,8 @@ function page() {
                 <Manufacturing />
                 <VegetableOilProcessing />
                 <ConsultancyServices />
+                <SolarPower />
+                <ProjectStartup />
                 <WhyChooseUs />
 
 

@@ -57,21 +57,15 @@ function WhyChooseUs() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.7 }}
                 >
-                    <h1 className="text-3xl md:text-4xl font-bold leading-tight">
+                    <h3 className="text-3xl md:text-4xl font-bold leading-tight">
                         Why Choose  <span className="text-[#33A259]">Us?</span>
-                    </h1>
+                    </h3>
 
                     <div className="w-20 h-1.5 bg-[#33A259] mx-auto my-6 rounded-full" />
 
                     {/* Description */}
-                    <p
-
-                        className="mt-6 text-gray-600 max-w-3xl"
-                    >
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                        accusantium doloremque laudantium, totam rem aperiam, eaque
-                        ipsa quae ab illo inventore veritatis et quasi architecto
-                        beatae vitae dicta sunt explicabo.
+                    <p className="mt-6 text-gray-600 max-w-3xl">
+                        We combine decades of leadership experience with practical, results-driven execution to deliver reliable solutions across design, manufacturing, processing, contracting, solar power systems, and technical project support. Our commitment to quality, efficiency, and accountability ensures every project is completed safely, on time, and to the highest industry standards.
                     </p>
 
                 </motion.section>

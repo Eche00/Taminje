@@ -66,9 +66,9 @@ function DesignAndFabrication() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7 }}
             >
-                <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+                <h3 className="text-4xl md:text-5xl font-bold leading-tight">
                     Design & <span className="text-[#33A259]">Fabrication</span>
-                </h2>
+                </h3>
 
                 <div className="w-20 h-1.5 bg-[#33A259] mx-auto my-6 rounded-full" />
 
@@ -97,8 +97,11 @@ function DesignAndFabrication() {
                         <motion.div
                             key={index}
                             variants={item}
-                            className="group p-8 rounded-2xl border border-gray-200 hover:border-[#33A259] hover:shadow-xl transition-all duration-300"
+                            className="group relative p-8 bg-white rounded-3xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2"
                         >
+                            {/* Decorative Accent */}
+                            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-[#33A259] rounded-full"></div>
+
                             <div className="h-14 w-14 flex items-center justify-center rounded-xl bg-[#33A259]/10 text-[#33A259] group-hover:bg-[#33A259] group-hover:text-white transition-all duration-300">
                                 {service.icon}
                             </div>

@@ -2,7 +2,7 @@
 
 import React from "react"
 import Link from "next/link"
-import { Facebook, LinkedIn, Instagram, LocationOn } from "@mui/icons-material"
+import { Facebook, LinkedIn, Instagram, LocationOn, Phone, Email } from "@mui/icons-material"
 
 function Footer() {
     return (
@@ -26,10 +26,26 @@ function Footer() {
                         {/* LOCATION */}
                         <div className="text-sm text-gray-400 flex items-start gap-2">
                             <div className=" text-[#33A259]  flex items-center justify-center rounded-lg"><LocationOn /></div>
-                            <p className="font-medium text-gray-300">No 8 Yahwehab Estate Phase, Plot 334
-                                Dahiru Musdapha Doulevard Wuye District,
-                                900108 Abuja Nigeria</p>
+                            <p className="font-medium text-gray-300">No 8 Yah-Wahab Estate Phase 3, Plot 334 Dahiru Musdapha Boulevard, Wuye District 900108, Abuja, Nigeria</p>
                         </div>
+                        <div className="text-sm text-gray-400 flex items-start gap-2">
+                            <div className=" text-[#33A259]  flex items-center justify-center rounded-lg"><Email /></div>
+                            <a href="mailto:info@taminje.com" className="font-medium text-gray-300">info@taminje.com</a>
+
+                        </div>
+                        <section className=" flex gap-2">
+                            <div className="text-sm text-gray-400 flex items-start gap-2">
+                                <div className=" text-[#33A259]  flex items-center justify-center rounded-lg"><Phone /></div>
+                                <a href="tel:+2348066878945" className="font-medium text-gray-300">
+                                    +234 806 687 8945
+                                </a>
+                            </div>
+                            <div className="text-sm text-gray-400 flex items-start gap-2">
+                                <div className=" text-[#33A259]  flex items-center justify-center rounded-lg"><Phone /></div>
+                                <a href="tel:+2348166562016" className="font-medium text-gray-300">+234 816 656 2016</a>
+                            </div>
+                        </section>
+
                     </div>
 
                     {/* COMPANY */}
@@ -65,6 +81,12 @@ function Footer() {
                             </li>
                             <li>
                                 General Contracting
+                            </li>
+                            <li>
+                                Solar Power Systems <br />(Design, Supply & Installation)
+                            </li>
+                            <li>
+                                Project Start-up & Troubleshooting
                             </li>
                         </ul>
                     </div>
