@@ -33,7 +33,7 @@ function Hero() {
                         <p className="text-white font-light sm:text-[18px] text-[14px] max-w-2xl">
                             Taminje International Limited is a multiservice company providing
                             design and fabrication, manufacturing, vegetable oil processing,
-                            consultancy services, and general contracting. We are built on experienced leadership and a
+                            consultancy services, general contracting, Solar Power Systems, Project Start-up & Troubleshooting. We are built on experienced leadership and a
                             disciplined approach to delivery.
                         </p>
                     </div>

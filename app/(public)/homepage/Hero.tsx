@@ -90,7 +90,7 @@ function Hero() {
                     className="flex flex-1 items-center justify-center"
                 >
                     {/* <Image src='' alt="Hero img" /> */}
-                    <img src="/homehero1.png" alt="" className=" rounded-2xl" />
+                    <img src="/homehero1.png" alt="Hero image (Home Page)" className=" rounded-2xl" />
                 </motion.div>
             </section>
 
