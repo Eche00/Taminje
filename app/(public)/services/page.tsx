@@ -9,7 +9,7 @@ import ProjectStartup from "./ProjectStartup"
 import SolarPower from "./SolarPower"
 
 export const metadata: Metadata = {
-    title: "Our Services | Taminje International Limite",
+    title: "Our Services | Taminje International Limited",
     description:
         "Explore Taminje International Limited's services including Design & Fabrication, Manufacturing, Vegetable Oil Processing, Consultancy Services, and General Contracting across Nigeria.",
 

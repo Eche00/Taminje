@@ -16,7 +16,7 @@ function Location() {
                     </p>
 
                     <p className="mt-1 sm:leading-relaxed text-gray-900">
-                        No. 8 Yahwehab Estate Phase, Plot 334
+                        No. 8 Yahwahab Estate Phase, Plot 334
                         <br />
                         Dahiru Musdapha Boulevard, Wuye District
                         <br />
@@ -27,7 +27,7 @@ function Location() {
 
             <div style={{ width: '100%', height: '500px' }}>
                 <iframe
-                    title="Yahwehab Estate Location"
+                    title="Yahwahab Estate Location"
                     src="https://www.google.com/maps?q=Wuye%20District%20Abuja%20Nigeria&output=embed"
                     width="100%"
                     height="100%"

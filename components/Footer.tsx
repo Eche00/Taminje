@@ -58,6 +58,7 @@ function Footer() {
                             <li><Link href="/about" className="hover:text-white">About Us</Link></li>
                             <li><Link href="/services" className="hover:text-white">Our Services</Link></li>
                             <li><Link href="/contact" className="hover:text-white">Contact</Link></li>
+                            <li><Link href="/contact" className="hover:text-white">Solar Calculator</Link></li>
                         </ul>
                     </div>
 
