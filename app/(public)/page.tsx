@@ -4,7 +4,6 @@ import AboutUs from './homepage/AboutUs'
 import ServicesOverview from './homepage/ServicesOverview'
 import CoreValues from './homepage/CoreValues'
 import Faqs from './homepage/Faqs'
-import SolarComponent from './services/SolarComponent'
 
 function page() {
     return (
@@ -16,7 +15,6 @@ function page() {
                 </div>
                 <AboutUs />
                 <ServicesOverview />
-                <SolarComponent />
                 <CoreValues />
                 <Faqs />
 
