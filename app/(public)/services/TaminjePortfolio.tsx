@@ -233,7 +233,7 @@ export default function TaminjePortfolio() {
         <div className="min-h-screen bg-gradient-to-b from-gray-50 via-white to-gray-100 p-6">
 
             {/* HERO SECTION */}
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 mb-3">
+            <h1 className="text-4xl font-bold tracking-tight text-gray-900 pt-10 mb-3">
                 Taminje Project Portfolio
             </h1>
 

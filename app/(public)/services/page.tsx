@@ -8,6 +8,7 @@ import WhyChooseUs from "./WhyChooseUs"
 import ProjectStartup from "./ProjectStartup"
 import SolarPower from "./SolarPower"
 import TaminjePortfolio from "./TaminjePortfolio"
+import ServicesPage from "./ServicesPage"
 
 export const metadata: Metadata = {
     title: "Our Services | Taminje International Limited",
@@ -36,12 +37,12 @@ function page() {
                     <Hero />
                 </div>
                 <TaminjePortfolio />
-                <DesignAndFabrication />
+                {/* <DesignAndFabrication />
                 <Manufacturing />
                 <VegetableOilProcessing />
                 <ConsultancyServices />
                 <SolarPower />
-                <ProjectStartup />
+                <ProjectStartup /> */}
                 <WhyChooseUs />
 
 

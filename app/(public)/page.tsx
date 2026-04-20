@@ -4,6 +4,7 @@ import AboutUs from './homepage/AboutUs'
 import ServicesOverview from './homepage/ServicesOverview'
 import CoreValues from './homepage/CoreValues'
 import Faqs from './homepage/Faqs'
+import ServicesPage from './services/ServicesPage'
 
 function page() {
     return (
@@ -14,7 +15,8 @@ function page() {
                     <Hero />
                 </div>
                 <AboutUs />
-                <ServicesOverview />
+                {/* <ServicesOverview /> */}
+                <ServicesPage />
                 <CoreValues />
                 <Faqs />
 
