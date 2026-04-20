@@ -1,5 +1,7 @@
 'use client'
 
+import { ArrowForward } from "@mui/icons-material";
+import Link from "next/link";
 import { useState } from "react";
 
 type Project = {
@@ -8,21 +10,31 @@ type Project = {
     title: string;
     type: string;
     role: string;
-    status: string;
-
-    location?: string;
-    date?: string;
-    duration?: string;
-    capacity?: string;
+    status: "Completed" | "Commissioned" | "In Progress" | "Concept";
 
     keyComponents: string[];
-    client?: string;
 
     description: string;
     marketingCaption: string;
 
     cover: string;
     gallery: string[];
+
+    // NEW structured metadata
+    metadata?: {
+        location?: string;
+        date?: string;
+        duration?: string;
+        capacity?: string;
+        client?: string;
+    };
+
+    // COMPATIBILITY LAYER (keeps your UI working)
+    capacity?: string;
+    client?: string;
+    location?: string;
+    date?: string;
+    duration?: string;
 };
 
 export default function TaminjePortfolio() {
@@ -32,23 +44,25 @@ export default function TaminjePortfolio() {
             id: "solar-utako",
             category: "Solar Power Systems",
             title: "EYN Utako 50 kW Hybrid Solar and Battery Installation",
-            type: "Solar Power Systems",
+            type: "Installation",
             role: "Solar system design, installation and commissioning",
             status: "Commissioned",
 
-            capacity: "50 kW inverter visible; modular Deye battery bank",
-            keyComponents: [
-                "Deye inverter",
-                "Deye battery modules",
-                "DC protection hardware",
-                "Cable trays",
-                "Suntree SPD/fuse boxes"
-            ],
+            metadata: {
+                capacity: "50 kW inverter visible; modular Deye battery bank",
+                client: "Unspecified",
+                location: "Unspecified",
+                date: "Unspecified",
+                duration: "Unspecified",
+            },
 
-            client: "Unspecified",
-            location: "Unspecified",
-            date: "Unspecified",
-            duration: "Unspecified",
+            keyComponents: [
+                "Deye Inverter",
+                "Deye Battery Modules",
+                "DC Protection Hardware",
+                "Cable Trays",
+                "Suntree SPD/Fuse Boxes"
+            ],
 
             description:
                 "End-to-end hybrid solar and battery installation featuring inverter integration, battery-bank assembly, DC protection hardware, organised cable routing and commissioning-stage finishing for dependable commercial backup power.",
@@ -56,31 +70,33 @@ export default function TaminjePortfolio() {
             marketingCaption:
                 "Commercial solar and storage integration executed with clean protection layout and disciplined finishing.",
 
-            cover: "/images/22.jpg",
-            gallery: ["/images/23.jpg", "/images/25.jpg"],
+            cover: "Solar-Power-Systems0.jpeg",
+            gallery: ["/Solar-Power-Systems1.jpeg"],
         },
 
         {
             id: "solar-room",
             category: "Battery Banks & Inverter Rooms",
             title: "Commercial Multi-Inverter Battery Room Installation",
-            type: "Solar Power Systems",
+            type: "Installation",
             role: "Commercial solar-battery installation, power integration and commissioning",
             status: "Commissioned",
 
-            capacity: "Multi-inverter + modular rack battery system",
-            keyComponents: [
-                "Solis inverter",
-                "Deye battery stacks",
-                "Inverter cabinets",
-                "Cable trays",
-                "Electrical protection panels"
-            ],
+            metadata: {
+                capacity: "Multi-inverter + modular rack battery system",
+                client: "Unspecified",
+                location: "Unspecified",
+                date: "Unspecified",
+                duration: "Unspecified",
+            },
 
-            client: "Unspecified",
-            location: "Unspecified",
-            date: "Unspecified",
-            duration: "Unspecified",
+            keyComponents: [
+                "Solis Inverter",
+                "Deye Battery Stacks",
+                "Inverter Cabinets",
+                "Cable Trays",
+                "Electrical Protection Panels"
+            ],
 
             description:
                 "Commercial inverter-room and battery-storage installation showcasing modular rack batteries, neat cable-tray routing, inverter integration, internal switchgear coordination and a clean expandable power-room layout.",
@@ -88,31 +104,33 @@ export default function TaminjePortfolio() {
             marketingCaption:
                 "A professionally organised inverter room built for commercial-scale energy resilience.",
 
-            cover: "/images/28.jpg",
-            gallery: ["/images/29.jpg", "/images/30.jpg", "/images/31.jpg", "/images/32.jpg"],
+            cover: "/Battery-Banks-Inverter-Rooms0.jpeg",
+            gallery: ["Battery-Banks-Inverter-Rooms1.jpeg", "/Battery-Banks-Inverter-Rooms2.jpeg", "/Battery-Banks-Inverter-Rooms3.jpeg", "/Battery-Banks-Inverter-Rooms4.jpeg"],
         },
 
         {
             id: "panel",
             category: "Control Panels & Electrical Cabinets",
             title: "Industrial Power Control and Protection Panel",
-            type: "Electrical Panels & Power Integration",
+            type: "Electrical Installation",
             role: "Panel assembly, internal wiring, protection coordination and testing",
-            status: "Complete",
+            status: "Completed",
 
-            capacity: "Three-phase industrial control system",
+            metadata: {
+                capacity: "Three-phase industrial control system",
+                client: "Unspecified",
+                location: "Unspecified",
+                date: "Unspecified",
+                duration: "Unspecified",
+            },
+
             keyComponents: [
-                "CHINT NC2-150/4 contactor",
-                "Moeller fuse switch",
+                "CHINT NC2-150/4 Contactor",
+                "Moeller Fuse Switch",
                 "Busbars",
-                "Protection relays",
-                "Terminal blocks"
+                "Protection Relays",
+                "Terminal Blocks"
             ],
-
-            client: "Unspecified",
-            location: "Unspecified",
-            date: "Unspecified",
-            duration: "Unspecified",
 
             description:
                 "Custom power-control and protection panel work covering safe isolation, switching, feeder organisation, clean internal wiring and robust component integration for industrial and energy applications.",
@@ -120,30 +138,32 @@ export default function TaminjePortfolio() {
             marketingCaption:
                 "Cleanly built control cabinets that support safe industrial switching and equipment protection.",
 
-            cover: "/images/19.jpg",
-            gallery: [],
+            cover: "/Control-Panels-Electrical-Cabinets0.jpeg",
+            gallery: ["/Control-Panels-Electrical-Cabinets1.jpeg", "/Control-Panels-Electrical-Cabinets2.jpeg"],
         },
 
         {
             id: "fabrication",
             category: "Processing Equipment",
             title: "Custom Agro-Processing Machine Fabrication",
-            type: "Design & Fabrication",
+            type: "Fabrication",
             role: "Mechanical design and fabrication of agro-processing equipment",
-            status: "Complete",
+            status: "Completed",
 
-            capacity: "Triple hopper-fed processing units",
+            metadata: {
+                capacity: "Triple hopper-fed processing units",
+                client: "Unspecified",
+                location: "Unspecified",
+                date: "Unspecified",
+                duration: "Unspecified",
+            },
+
             keyComponents: [
-                "Steel hopper systems",
-                "Guarded belt drives",
-                "Welded steel frames",
-                "Discharge chutes"
+                "Steel Hopper Systems",
+                "Guarded Belt Drives",
+                "Welded Steel Frames",
+                "Discharge Chutes"
             ],
-
-            client: "Unspecified",
-            location: "Unspecified",
-            date: "Unspecified",
-            duration: "Unspecified",
 
             description:
                 "Custom-fabricated hopper-fed agro-processing machines built for practical field use, durable serviceability and repeatable production performance.",
@@ -151,31 +171,33 @@ export default function TaminjePortfolio() {
             marketingCaption:
                 "Custom-fabricated processing units built for reliable, repeatable agro-processing.",
 
-            cover: "/images/17.jpg",
-            gallery: [],
+            cover: "/Processing-Equipment.jpeg",
+            gallery: ['Processing-Equipment0.jpeg', 'Processing-Equipment1.jpeg', 'Processing-Equipment3.jpeg', 'Processing-Equipment4.jpeg'],
         },
 
         {
             id: "installation",
             category: "Mechanical Installations",
             title: "Cyclone-Assisted Processing Line Installation and Start-up",
-            type: "Installation & Start-up",
+            type: "Installation",
             role: "Installation, alignment and start-up support for processing equipment",
             status: "Commissioned",
 
-            capacity: "Cyclone + ducted processing line",
-            keyComponents: [
-                "Cyclone separators",
-                "Blower systems",
-                "Ducting",
-                "Structural frames",
-                "Motor assemblies"
-            ],
+            metadata: {
+                capacity: "Cyclone + ducted processing line",
+                client: "Unspecified",
+                location: "Unspecified",
+                date: "Unspecified",
+                duration: "Unspecified",
+            },
 
-            client: "Unspecified",
-            location: "Unspecified",
-            date: "Unspecified",
-            duration: "Unspecified",
+            keyComponents: [
+                "Cyclone Separators",
+                "Blower Systems",
+                "Ducting",
+                "Structural Frames",
+                "Motor Assemblies"
+            ],
 
             description:
                 "Plant installation and start-up support for a cyclone-assisted processing line, including equipment positioning, integration works and readiness for commissioning activities.",
@@ -183,7 +205,7 @@ export default function TaminjePortfolio() {
             marketingCaption:
                 "Mechanical installation delivered with structured ducting and practical site integration.",
 
-            cover: "/images/18.jpg",
+            cover: "/Mechanical-Installations.jpeg",
             gallery: [],
         },
 
@@ -191,22 +213,24 @@ export default function TaminjePortfolio() {
             id: "product",
             category: "Oil Packaging & Branding",
             title: "Taminje Sesame Oil Reserve Edition Concept",
-            type: "Product Development & Packaging",
+            type: "Product Design",
             role: "Product concept development and packaging design",
-            status: "Complete",
+            status: "Completed",
 
-            capacity: "1000ml bottle format",
+            metadata: {
+                capacity: "1000ml bottle format",
+                client: "Taminje International Ltd",
+                location: "Unspecified",
+                date: "Unspecified",
+                duration: "Unspecified",
+            },
+
             keyComponents: [
-                "Bottle design",
-                "Nutrition panel",
-                "Barcode system",
-                "Premium label artwork"
+                "Bottle Design",
+                "Nutrition Panel",
+                "Barcode System",
+                "Premium Label Artwork"
             ],
-
-            client: "Taminje International Ltd",
-            location: "Unspecified",
-            date: "Unspecified",
-            duration: "Unspecified",
 
             description:
                 "Premium sesame-oil packaging concept developed to present a refined, export-ready product identity for Taminje’s vegetable-oil offering.",
@@ -214,7 +238,7 @@ export default function TaminjePortfolio() {
             marketingCaption:
                 "Premium branding that turns a processed product into a retail-ready brand.",
 
-            cover: "/images/20.jpg",
+            cover: "/Oil-P.jpeg",
             gallery: [],
         },
     ];
@@ -230,13 +254,20 @@ export default function TaminjePortfolio() {
             : projects.filter(p => p.category === filter);
 
     return (
-        <div className="min-h-screen bg-gradient-to-b from-gray-50 via-white to-gray-100 p-6">
+        <div className="min-h-screen bg-gray-100 p-6">
 
             {/* HERO SECTION */}
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 pt-10 mb-3">
-                Taminje Project Portfolio
-            </h1>
+            <div
 
+            >
+                <h3 className="text-4xl md:text-5xl font-bold leading-tight">
+                    Our Project  <span className="text-[#33A259]">Portfolio</span>
+                </h3>
+
+                <div className="w-20 h-1.5 bg-[#33A259] my-6 rounded-full" />
+
+
+            </div>
             {/* FILTER BAR */}
             <div className="sticky top-3 z-20 mb-8">
                 <div className="flex flex-wrap gap-2 p-3 bg-white/70 rounded-2xl ">
@@ -246,10 +277,10 @@ export default function TaminjePortfolio() {
                             onClick={() => setFilter(cat)}
                             className={`
                         px-4 py-1.5 rounded-full text-sm transition-all duration-200
-                        border
+                        border cursor-pointer
                         ${filter === cat
-                                    ? "bg-black text-white shadow-md"
-                                    : "bg-white hover:bg-gray-100 text-gray-700"
+                                    ? "bg-[#33A259] text-white shadow-md"
+                                    : "bg-white hover:bg-[#33A259] text-[#33A259]"
                                 }
                     `}
                         >
@@ -312,7 +343,13 @@ export default function TaminjePortfolio() {
                     </div>
                 ))}
             </div>
-
+            <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 mt-10 bg-[#33A259] text-white px-8 py-4 rounded-xl font-medium hover:scale-105 transition-all duration-300"
+            >
+                Discuss Your Project
+                <ArrowForward fontSize="small" />
+            </Link>
             {/* MODAL (ENGINEERING DATASHEET STYLE) */}
             {selected && (
                 <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 z-50">
