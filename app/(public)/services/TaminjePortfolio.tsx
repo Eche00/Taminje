@@ -1,6 +1,6 @@
 'use client'
 
-import { ArrowForward } from "@mui/icons-material";
+import { ArrowForward, FilterList } from "@mui/icons-material";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -38,7 +38,6 @@ type Project = {
 };
 
 export default function TaminjePortfolio() {
-
     const projects: Project[] = [
         {
             id: "solar-utako",
@@ -269,24 +268,37 @@ export default function TaminjePortfolio() {
 
             </div>
             {/* FILTER BAR */}
-            <div className="sticky top-3 z-20 mb-8">
-                <div className="flex flex-wrap gap-2 p-3 bg-white/70 rounded-2xl ">
-                    {categories.map(cat => (
-                        <button
-                            key={cat}
-                            onClick={() => setFilter(cat)}
-                            className={`
-                        px-4 py-1.5 rounded-full text-sm transition-all duration-200
-                        border cursor-pointer
-                        ${filter === cat
-                                    ? "bg-[#33A259] text-white shadow-md"
-                                    : "bg-white hover:bg-[#33A259] text-[#33A259]"
-                                }
-                    `}
-                        >
-                            {cat}
-                        </button>
-                    ))}
+            <div className="w-fit relative flex items-center gap-2 bg-white/90 backdrop-blur-md rounded-2xl px-4 py-3 hover:shadow-lg transition-all duration-300 mb-4 border-2 border-[#33A259]">
+
+                {/* Icon */}
+                <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-[#33A259]/10 text-[#33A259]">
+                    <FilterList fontSize="small" />
+                </div>
+
+                {/* Select */}
+                <div className="relative">
+                    <select
+                        value={filter}
+                        onChange={(e) => setFilter(e.target.value)}
+                        className="
+          appearance-none
+          bg-transparent
+          pr-8
+          text-sm font-semibold
+          text-gray-800
+          outline-none
+          cursor-pointer
+          min-w-[180px]
+        "
+                    >
+                        {categories.map((cat) => (
+                            <option key={cat} value={cat}>
+                                {cat}
+                            </option>
+                        ))}
+                    </select>
+
+
                 </div>
             </div>
 
